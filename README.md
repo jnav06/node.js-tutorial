@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/images/logo.png" width="700">
+  <img src="public/images/logo.png" width="150">
 </p>
 
 ## node.js-tutorial
