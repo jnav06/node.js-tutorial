@@ -9,5 +9,5 @@ welcome to my web app. created using node.js (express for backend)
 ## Showcase
 
 <p align="center">
-  <img src="showcase.png" width="700">
+  <img src="showcase.png" width="500">
 </p>
