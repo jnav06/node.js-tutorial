@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+
+        <title>my web app</title>
+        <link rel = "stylesheet" href = "/css/main.css">
+        <link rel = "icon" type = "ico" href = "/images/favicon.ico">
+
+    </head>
+
+    <body>
+        
+        <div id = "app">
+
+            <img id = "logo" src = "/images/logo.png">
+            <h1 id = "home-title">Welcome to my web app!</h1>
+            <p>this web app was created using <a href = "https://nodejs.org/en">node.js</a></p>
+
+            <div id="input-error" class="hidden">
+                <p id = "error-title">Error: nothing was entered</p>
+                <p id = "error-message">try entering something, anything!</p>
+            </div>
+
+            <div class="post-field">
+                <input id = "post-input" class = "input" placeholder = "write something to add below!">
+                <button id = "sample-btn">add text</button>
+            </div>
+
+            <div class = "hidden" id="card">
+                <img id = "image" src = "/images/march7.png" alt = "icon">
+                <div id = "card-content">
+                    <p id="title"></p>
+                    <p id="content"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

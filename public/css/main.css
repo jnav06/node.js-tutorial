@@ -1,0 +1,226 @@
+
+@font-face {
+  font-family: 'Torus';
+  src: url('/fonts/Torus\ Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Varela';
+  src: url('/fonts/VarelaRound-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* background */
+    --bg1: #15171c;
+    --bg2: #1B1D24;
+    --bg3: #23252e;
+    --border: #252831;
+
+    /* text */
+    --text1: #ffffff;
+    --text2: #B1B9CC;
+    --text3: #646a7a;
+
+    /* forms */
+    --input: #0F0F10;
+    --input-border: #181819;
+    --button: #219DEE;
+    --button-hover: #37afff;
+    --button-text: #002C46;
+
+    /* alerts */
+    --alert-main: #67C7FE;
+    --alert-main-text: #002C46;
+
+    --alert-warning: rgba(255, 102, 145, 0.13);
+    --alert-warning-text1: #FF6691;
+    --alert-warning-text2: rgba(255, 102, 145, 0.75);
+}
+
+/* main css stuff */
+
+body {
+    background-color: var(--bg1);
+    font-family: 'Varela', sans-serif;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 0 16px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+#home-title {
+    color: white;
+    font-family: 'Torus';
+    font-weight: bold;
+
+    background: repeating-linear-gradient(-90deg, #FF91E8, #CC91FF, #78DBFF, #CC91FF, #FF91E8);
+    background-size: 125vh;
+
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: slide 2s linear infinite forwards;
+}
+
+@keyframes slide {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: -125vh;
+    }
+}
+
+#input-error {
+    background-color: var(--alert-warning);
+    border-left: 3px solid var(--alert-warning-text1);
+    border-radius: 0 7px 7px 0;
+
+    padding: 0.1px 15px;
+    margin-bottom: 15px;
+}
+
+#error-title {
+    color: var(--alert-warning-text1);
+    font-weight: bold;
+}
+
+#error-message {
+    color: var(--alert-warning-text2);
+}
+
+.post-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    background-color: var(--input);
+    color: var(--text2);
+
+    font-family: 'Varela';
+
+    border: 2px solid var(--border);
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+
+    transition: 0.04s;
+}
+
+.input::placeholder {
+    color: var(--text3);
+}
+
+.input:focus {
+    border: 2px solid var(--button);
+    box-shadow: 0px 0px 3px rgba(59, 130, 246, 0.5);
+
+    color: var(--text2);
+    outline: none;
+}
+
+#sample-btn {
+    background-color: var(--button);
+    color: var(--alert-main-text);
+
+    font-weight: bold;
+    font-family: 'Varela';
+
+    border-style: none;
+    border-width: 1px;
+    border-radius: 5px;
+
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    align-self: flex-end;
+}
+
+#sample-btn:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+#card {
+    background-color: var(--bg2);
+    color: var(--text2);
+
+    border-color: var(--border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: slideFadeIn 0.2s ease forwards;
+}
+
+#image {
+    width: 75px;
+    height: 75px;
+}
+
+#app h1 {
+    color: white;
+}
+
+p {
+    color: var(--text2);
+}
+
+a {
+    color: var(--alert-main);
+    font-weight: bold;
+}
+
+#title {
+    color: var(--text1);
+    font-weight: bold;
+}
